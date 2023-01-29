@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    font-family:'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.loginContainer{
+    width: 450px;
+    margin: 10% 35%;
+    border: 0;
+    border-radius: 3px;
+    border-style: outset;
+    box-shadow: 5px 10px 18px gray;
+    padding: 60px;
+    display: inline-grid;
+    overflow: hidden;
+
+}
+
+@media (min-width: 768px) {
+    .loginContainer {
+      /* Styles for screens larger than 768px */
+      max-width: 600px;
+    }
+  }
+
+img{
+    width: 275px;
+    height: 100px;
+    margin-left: 90px;
+}
+.divider{
+    border: 0;
+    border-bottom: 4px  solid rgb(70, 70, 70);
+    width: 100%;
+    margin: 20px 0;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.toggle-password-eye {
+    float: right;
+    top: -37px;
+    right: 14px;
+    position: relative;
+    cursor: pointer;
+}
+.loginbutton{
+    background-color: #003365;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 17px;
+    font-weight: 600;
+}
