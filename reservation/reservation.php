@@ -40,10 +40,10 @@
 </html>
 <div class="home-section">
     <div class="home-content">
-      <i class='bx bx-menu' ></i>
-      <span class="text">Reservation</span>
-  
-</div>
+        <nav>
+            <div class="side-bar-button"><i class='bx bx-menu' ></i>
+            <span class="text" style="margin-bottom: 15px;">Reservation</span> </div>
+        </nav>
 
 
 

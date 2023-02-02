@@ -212,7 +212,7 @@
   position: relative;
   background: #E4E9F7;
   height: 100vh;
-  left: 260px;
+  left: 280px;
   width: calc(100% - 260px);
   transition: all 0.5s ease;
 }
@@ -333,3 +333,21 @@
     left: 0;
   }
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #fff;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 80px);
+  z-index: 999;
+  box-shadow: 0 1px 1px;
+  padding: 0 20px;
+}
+
+.side-bar-button {
+  margin-top: 15px;
+}
+

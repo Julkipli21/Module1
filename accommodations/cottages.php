@@ -1,4 +1,4 @@
-<title>Cottages</title>
+<title>Cottage</title>
 
 <?php
 
@@ -29,10 +29,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dashboard.css">
-    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="../css/table.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script src="https://kit.fontawesome.com/0cc7e94eea.js" crossorigin="anonymous"></script>
 
+    
 </head>
 <body>
     
@@ -40,11 +41,82 @@
 </body>
 </html>
 <div class="home-section">
-    <div class="home-content">
-      <i class='bx bx-menu' ></i>
-      <span class="text">Cottages</span>
-  
-</div>
+<div class="home-content"><nav>
+            <div class="side-bar-button"><i class='bx bx-menu' ></i>
+            <span class="text" style="margin-bottom: 15px;">Cottages</span> </div>
+        </nav> 
+        <div class="table-container">
+        
+            <div class="table-heading">
+                <?php
+                    if($_SESSION['user_type'] == 'admin'){ 
+                ?>
+                    <a href="addhotelrooms.php" class="button">Add</a>
+                <?php
+                    }
+                ?>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Cottage Tpe</th>
+                        <th>Description</th>
+                        <th>Capacity</th>
+                        <th>Inclusion</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <?php
+                            if($_SESSION['user_type'] == 'admin'){ 
+                        ?>
+                            <th class="action">Action</th>
+                        <?php
+                            }
+                        ?>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        require_once '../classes/cottages.class.php';
+
+                        $cottage = new Cottage();
+                        //We will now fetch all the records in the array using loop
+                        //use as a counter, not required but suggested for the table
+                        $i = 1;
+                        //loop for each record found in the array
+                        foreach ($cottage->show() as $value){ //start of loop
+                    ?>
+                        <tr>
+                            <!-- always use echo to output PHP values -->
+                            <td><?php echo $i ?></td>
+                            <td><?php echo $value['cottype']?></td>
+                            <td><?php echo $value['description'] ?></td>
+                            <td><?php echo $value['capacity'] ?></td>
+                            <td><?php echo $value['inclusion'] ?></td>
+                            <td><?php echo $value['price'] ?></td>
+                            <td><?php echo $value['status'] ?></td>
+                            <?php
+                                if($_SESSION['user_type'] == 'admin'){ 
+                            ?>
+                                <td>
+                                    <div class="action">
+                                        <a class="action-edit" href="editcottage.php?id=<?php echo $value['id'] ?>">Edit</a>
+                                        <a class="action-delete" href="deletecottage.php?id=<?php echo $value['id'] ?>">Delete</a>
+                                    </div>
+                                </td>
+                            <?php
+                                }
+                            ?>
+                        </tr>
+                    <?php
+                        $i++;
+                    //end of loop
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
 

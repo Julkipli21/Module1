@@ -39,7 +39,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../login-css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script src="https://kit.fontawesome.com/0b41ca1493.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

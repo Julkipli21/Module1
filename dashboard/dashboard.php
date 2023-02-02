@@ -28,23 +28,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../dashboard-css/dashboard.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../sidebar-css/sidebar.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script src="https://kit.fontawesome.com/0cc7e94eea.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
-</head>
-<body>
 
+    
+    
 
-</body>
-</html>
 <div class="home-section">
     <div class="home-content">
-      <i class='bx bx-menu' ></i>
-      <span class="text">Dashboard</span>
-
-
+        <nav>
+            <div class="side-bar-button"><i class='bx bx-menu' ></i>
+            <span class="text" style="margin-bottom: 15px;">Dashboard</span> </div>
+        </nav>
       <div class="overview-boxes">
             <div class="box">
                 <div class="right-side">

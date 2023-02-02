@@ -41,9 +41,10 @@
 </html>
 <div class="home-section">
     <div class="home-content">
-      <i class='bx bx-menu' ></i>
-      <span class="text">Discounts</span>
-  
+        <nav>
+            <div class="side-bar-button"><i class='bx bx-menu' ></i>
+            <span class="text" style="margin-bottom: 15px;">Discounts</span> </div>
+        </nav>
 </div>
 
 

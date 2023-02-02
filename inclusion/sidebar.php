@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script src="https://kit.fontawesome.com/0cc7e94eea.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../sidebar-css/sidebar.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
 </head>
 <body>
   <div class="sidebar close">
