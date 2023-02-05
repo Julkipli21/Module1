@@ -351,3 +351,14 @@ nav {
   margin-top: 15px;
 }
 
+.side-bar .nav-links .active{
+  background-color: #000000;
+}
+
+.side-bar .nav-links li i:active{
+  background-color: #000000;
+}
+
+.side-bar .nav-links li a:hover{
+  background-color: #000000;
+}

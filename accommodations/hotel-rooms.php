@@ -19,6 +19,8 @@
     //if the above code is false then html below will be displayed
 
     require_once '../inclusion/sidebar.php';
+    require_once '../classes/hotelrooms.class.php';
+    
 
 ?>
 
@@ -28,7 +30,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard.css">
+
     <link rel="stylesheet" href="../css/table.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script src="https://kit.fontawesome.com/0cc7e94eea.js" crossorigin="anonymous"></script>
@@ -51,10 +53,11 @@
                 <?php
                     if($_SESSION['user_type'] == 'admin'){ 
                 ?>
-                    <a href="addhotelrooms.php" class="button">Add</a>
+                    
                 <?php
                     }
                 ?>
+                <a id="addform" href="addhotelrooms.php" class="button">+ Add</a>
             </div>
             <table class="table">
                 <thead>
@@ -77,20 +80,19 @@
                 </thead>
                 <tbody>
                     <?php
-                        require_once '../classes/hotelrooms.class.php';
 
-                        $hotelroom = new Hotelrooms();
+                        $hotelrooms = new Hotelrooms();
                         //We will now fetch all the records in the array using loop
                         //use as a counter, not required but suggested for the table
                         $i = 1;
                         //loop for each record found in the array
-                        foreach ($hotelroom->show() as $value){ //start of loop
+                        foreach ($hotelrooms->show() as $value){ //start of loop
                     ?>
                         <tr>
                             <!-- always use echo to output PHP values -->
                             <td><?php echo $i ?></td>
-                            <td><?php echo $value['room_type']?></td>
-                            <td><?php echo $value['room_description'] ?></td>
+                            <td><?php echo $value['roomtype']?></td>
+                            <td><?php echo $value['roomdescription'] ?></td>
                             <td><?php echo $value['capacity'] ?></td>
                             <td><?php echo $value['inclusion'] ?></td>
                             <td><?php echo $value['price'] ?></td>
@@ -119,8 +121,6 @@
     </div>
 
 
-
-
   <script>
   let arrow = document.querySelectorAll(".arrow");
   for (var i = 0; i < arrow.length; i++) {
@@ -135,6 +135,16 @@
   sidebarBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("close");
   });
+
+  document.getElementById("addform").addEventListener("click", function(){
+  document.getElementById("formcontainer").style.display = "block";
+});
+
+function closeForm() {
+        document.getElementById("formcontainer").style.display = "none";
+      }
+
+
   </script>
   
 </body>

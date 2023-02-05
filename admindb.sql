@@ -131,7 +131,7 @@ CREATE TABLE `promos` (
 --
 -- Indexes for table `other-amenities`
 --
-ALTER TABLE `other-amenities`
+ALTER TABLE `otheramenities`
   ADD PRIMARY KEY (`id`);
 
 --

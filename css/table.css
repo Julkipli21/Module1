@@ -26,7 +26,7 @@ body{
 .divider{
     border: 0;
     border-bottom: 2px  solid rgb(70, 70, 70);
-    width: 100%;
+    width: 100%;    
     margin: 20px 0;
 }
 
@@ -229,7 +229,7 @@ nav .side-bar-button i{
     background: rgb(22, 134, 0);
     color: white;
     cursor: pointer;
-    margin-left: 800px;
+    margin-left: 1000px;
 }
 
 
@@ -317,9 +317,9 @@ a.action-edit:hover, a.action-delete:hover{
                 margin: 20px;
             }
             
-            .table-container{
-                position: relative;
-                top: 280px;
+            .table-container {
+                position: absolute;
+                top: 75px;
                 padding: 40px;
                 left: 75px;
             }
@@ -378,3 +378,9 @@ a.action-edit:hover, a.action-delete:hover{
             }
                          /************************END OF PROFILE & TABLE*********************/
 
+
+
+
+
+
+            

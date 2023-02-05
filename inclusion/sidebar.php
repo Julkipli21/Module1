@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script src="https://kit.fontawesome.com/0cc7e94eea.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
@@ -27,7 +27,7 @@
     <ul class="nav-links">
     <hr>
       <li>
-        <a href="../dashboard/dashboard.php">
+        <a href="../dashboard/dashboard.php" >
           <i class='bx bx-grid-alt' ></i>
           <span class="link_name" href="#">Dashboard</span>
         </a>
@@ -45,7 +45,7 @@
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Accommodations</a></li>
-          <li></i><a href="../accommodations/hotel-rooms.php">Hotel Rooms</a></li>
+          <li><a href="../accommodations/hotel-rooms.php">Hotel Rooms</a></li>
           <li><a href="../accommodations/villas.php">Villas</a></li>
           <li><a href="../accommodations/cottages.php">Cottages</a></li>
         </ul>
