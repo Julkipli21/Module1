@@ -16,7 +16,6 @@
     }
     //if the above code is false then html below will be displayed
 
-    require_once '../inclusion/sidebar.php';
     require_once '../classes/villas.class.php';
     
 
@@ -33,11 +32,13 @@
     
         if($villas->add()){
         //redirect user to program page after saving
-        
+        header('location: villas.php');
     }
 }
 
     require_once '../tools/variables.php';
+    require_once '../inclusion/header.php';
+    require_once '../inclusion/sidebar.php';
 
 ?>
 
@@ -184,7 +185,7 @@
         </nav> 
     </div>
 <div class="container" id="formcontainer">
-  <form action="villas.php" method="post">
+  <form action="addvillas.php" method="post">
   <div class="row">
     <div class="col-25">
       <label for="vill_type">Villas Type</label>

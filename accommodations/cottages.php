@@ -18,11 +18,12 @@
     }
     //if the above code is false then html below will be displayed
 
+    require_once '../inclusion/header.php';
     require_once '../inclusion/sidebar.php';
-    require_once '../classes/cottages.class.php';
   
 ?>
 
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -192,7 +193,7 @@ input[type=submit]:hover {
                 </thead>
                 <tbody>
                     <?php
-                        require_once '../classes/hotelrooms.class.php';
+                        require_once '../classes/cottages.class.php';
 
                         $cottage = new Cottage();
                         //We will now fetch all the records in the array using loop

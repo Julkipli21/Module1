@@ -16,7 +16,6 @@
     }
     //if the above code is false then html below will be displayed
 
-    require_once '../inclusion/sidebar.php';
     require_once '../classes/cottages.class.php';
     
 
@@ -33,10 +32,12 @@
     
         if($cottage->add()){
         //redirect user to program page after saving
-        
+        header('location: cottages.php');
     }
 }
 
+    require_once '../inclusion/header.php';
+    require_once '../inclusion/sidebar.php';
     require_once '../tools/variables.php';
 
 ?>
@@ -184,7 +185,7 @@
         </nav> 
     </div>
 <div class="container" id="formcontainer">
-  <form action="cottages.php" method="post">
+  <form action="addcottages.php" method="post">
   <div class="row">
     <div class="col-25">
       <label for="cottype">Cottage Type</label>

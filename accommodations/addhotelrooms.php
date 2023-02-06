@@ -16,9 +16,8 @@
     }
     //if the above code is false then html below will be displayed
 
-    require_once '../inclusion/sidebar.php';
-    require_once '../classes/hotelrooms.class.php';
-    
+
+      require_once '../classes/hotelrooms.class.php';
 
     if(isset($_POST['save'])){
 
@@ -33,11 +32,14 @@
     
         if($hotelrooms->add()){
         //redirect user to program page after saving
-        
+        header('location: hotel-rooms.php');
     }
 }
 
-    require_once '../tools/variables.php';
+    require_once '../tools/variables.php';    
+    require_once '../inclusion/sidebar.php';
+    require_once '../inclusion/header.php';
+
 
 ?>
 
@@ -49,7 +51,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../css/table.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  
     <script src="https://kit.fontawesome.com/0cc7e94eea.js" crossorigin="anonymous"></script>
 
 
@@ -184,7 +186,7 @@
         </nav> 
     </div>
 <div class="container" id="formcontainer">
-  <form action="hotel-rooms.php" method="post">
+  <form action="addhotelrooms.php" method="post">
   <div class="row">
     <div class="col-25">
       <label for="roomtype">Room  Type</label>

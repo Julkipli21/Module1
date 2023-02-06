@@ -15,7 +15,6 @@
     }
     //if the above code is false then html below will be displayed
 
-    require_once '../inclusion/sidebar.php';
     require_once '../classes/cottages.class.php';
     
 
@@ -35,7 +34,7 @@
         }
             if($cottage->edit()){
                 //redirect user to program page after saving
-
+                header('location: cottages.php');
             }
     }else{
         if ($cottage->fetch($_GET['id'])){
@@ -50,6 +49,8 @@
         }
     }
 
+    require_once '../inclusion/header.php';
+    require_once '../inclusion/sidebar.php';
     require_once '../tools/variables.php';    
 ?>
 

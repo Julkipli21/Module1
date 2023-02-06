@@ -15,7 +15,6 @@
     }
     //if the above code is false then html below will be displayed
 
-    require_once '../inclusion/sidebar.php';
     require_once '../classes/hotelrooms.class.php';
     
 
@@ -35,6 +34,7 @@
         }
             if($hotelrooms->edit()){
                 //redirect user to program page after saving
+                header('location: hotel-rooms.php');
 
             }
     }else{
@@ -51,6 +51,8 @@
     }
 
     require_once '../tools/variables.php';
+    require_once '../inclusion/sidebar.php';
+    require_once '../inclusion/header.php';
 ?>
 
 <!DOCTYPE html>

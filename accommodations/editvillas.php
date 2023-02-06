@@ -16,7 +16,6 @@
     }
     //if the above code is false then html below will be displayed
 
-    require_once '../inclusion/sidebar.php';
     require_once '../classes/villas.class.php';
     
 
@@ -50,7 +49,9 @@
             $villas->status = $data['status'];
         }
     }
-
+    
+    require_once '../inclusion/header.php';
+    require_once '../inclusion/sidebar.php';
     require_once '../tools/variables.php';
 
 ?>
