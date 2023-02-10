@@ -344,7 +344,6 @@ nav {
   width: calc(100% - 80px);
   z-index: 999;
   box-shadow: 0 1px 1px;
-  padding: 0 20px;
 }
 
 .side-bar-button {

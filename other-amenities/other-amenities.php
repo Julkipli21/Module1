@@ -9,7 +9,7 @@
         this is to prevent users from accessing pages that requires
         authentication such as the dashboard
     */
-    if (!isset($_SESSION['logged-in'])){
+    if (!isset($_SESSION['logged_id'])){
         header('location: ../login/login.php');
     }
 
@@ -31,7 +31,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/sidebar.css">
-
+    <link rel="stylesheet" href="../css/table.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script src="https://kit.fontawesome.com/0cc7e94eea.js" crossorigin="anonymous"></script>
 
@@ -44,11 +44,11 @@
     <div class="home-content">
     <nav>
             <div class="side-bar-button"><i class='bx bx-menu' ></i>
-            <span class="text" style="margin-bottom: 15px;">Dashboard</span> </div>
+            <span class="text">Other Amenities</span> </div>
         </nav>
         <div class="table-container">
             <div class="table-heading">
-                <h3 class="table-title">Other Amenities</h3>
+      
                 <?php
                     if($_SESSION['user_type'] == 'admin'){ 
                 ?>
@@ -101,8 +101,8 @@
                             ?>
                                 <td>
                                     <div class="action">
-                                        <a class="action-edit" href="editreservation.php?id=<?php echo $value['id'] ?>"><i class='bx bxs-edit'></i></a>
-                                        <a class="action-delete" href="delete.php?id=<?php echo $value['id'] ?>"><i class='bx bxs-trash'></i></a>
+                                        <a class="action-edit" href="edit-other-amenities.php?id=<?php echo $value['id'] ?>">Edit</a>
+                                        <a class="action-delete" href="delete-other-amenities.php?id=<?php echo $value['id'] ?>">Delete</a>
                                     </div>
                                 </td>
                             <?php

@@ -1,38 +1,35 @@
 <?php
-        //we start session since we need to use session values
-        session_start();
-        //creating an array for list of users can login to the system
-        $accounts = array(
-            "user1" => array(
-                "firstname" => '',
-                "lastname" => '',
-                "type" => 'admin',
-                "username" => 'admin',
-                "password" => 'admin'
-            )
-        );
-        if(isset($_POST['username']) && isset($_POST['password'])){
-            //Sanitizing the inputs of the users. Mandatory to prevent injections!
-            $username = htmlentities($_POST['username']);
-            $password = htmlentities($_POST['password']);
-            foreach($accounts as $keys => $value){
-                //check if the username and password match in the array
-                if($username == $value['username'] && $password == $value['password']){
-                    //if match then save username, fullname and type as session to be reused somewhere else
-                    $_SESSION['logged-in'] = $value['username'];
-                    $_SESSION['fullname'] = $value['firstname'] . ' ' . $value['lastname'];
-                    $_SESSION['user_type'] = $value['type'];
-                    //display the appropriate dashboard page for user
-                    if($value['type'] == 'admin'){
-                        header('location: ../dashboard/dashboard.php');
-                    }
-                }
+
+  require_once '../classes/accounts.class.php';
+
+  session_start();
+
+  $accounts = new Accounts();
+  if(isset($_POST['username']) && isset($_POST['password'])){
+    //Sanitizing the inputs of the users. Mandatory to prevent injections!
+    $accounts->username = htmlentities($_POST['username']);
+    $accounts->password = htmlentities($_POST['password']);
+    if($accounts->sign_in_admin()){
+        $accounts = $accounts->get_account_info();
+        foreach($accounts as $row){
+            $_SESSION['logged_id'] = $row['id'];
+            $_SESSION['fullname'] = 'Temporary';
+            $_SESSION['user_type'] = $row['user_type'];
+            //display the appropriate dashboard page for user
+            if($row['user_type'] == 'admin'){
+                header('location: ../dashboard/dashboard.php');
+            }else if($row['user_type'] == 'cashier'){
+                header('location: ../cashier/dashboard.php');
+            }else if($row['user_type'] == 'receptionist'){
+                header('location: ../receptionist/dashboard.php');
             }
-            //set the error message if account is invalid
-            $error = 'Invalid username/password. Try again.';
         }
-    
-    ?>
+    }else{
+        //set the error message if account is invalid
+        $error = 'Invalid username/password. Try again.';
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

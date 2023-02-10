@@ -1,4 +1,4 @@
-<body>
+
   <div class="sidebar close">
     <div class="logo-details">
       <i class="fa-solid fa-circle-user"></i>
@@ -11,6 +11,7 @@
       </div>
     </form>
     <ul class="nav-links">
+
     <hr>
       <li>
         <a href="../dashboard/dashboard.php" >
@@ -24,7 +25,7 @@
         </ul>
       </li>
       <li>
-        <div class="iocn-link">
+       <div class="iocn-link">
           <a href="#">
           <i class="fa-solid fa-hotel"></i>
             <span class="link_name">Accommodations</span>
@@ -32,12 +33,15 @@
           <i class='bx bxs-chevron-down arrow' ></i>
         </div>
         <ul class="sub-menu">
+        
           <li><a class="link_name" href="#">Accommodations</a></li>
           <li><a href="../accommodations/hotel-rooms.php">Hotel Rooms</a></li>
           <li><a href="../accommodations/villas.php">Villas</a></li>
           <li><a href="../accommodations/cottages.php">Cottages</a></li>
         </ul>
+        
       </li>
+     
       <li>
         <div class="iocn-link">
           <a href="#">
@@ -120,6 +124,6 @@
           <li><a class="link_name">Settings</a></li>
         </ul>
       </li>
+      
 </ul>
   </div>
-  

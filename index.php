@@ -1,16 +1,17 @@
+
+
 <?php
-    
-    //this is where the page starts
 
-    //start session
-    session_start();
+  //start session
+  session_start();
 
-    //check if user is login already otherwise send to login page
-    if (isset($_SESSION['user_type']) == 'admin'){
-        header('location: dashboard.php');
-    }
-    else{
-        header('location: login/login.php');
-    }
+  //check if user is login already
+  if(isset($_SESSION['logged_id']) && $_SESSION['user_type'] == 'admin'){
+      header('location: ../dashboard/dashboard.php');
+  }else if(isset($_SESSION['logged_id']) && $_SESSION['user_type'] == 'faculty'){
+      header('location: ../faculty/dashboard.php');
+  }else if(isset($_SESSION['logged_id']) && $_SESSION['user_type'] == 'student'){
+      header('location: ../student/index.php');
+  }
 
 ?>

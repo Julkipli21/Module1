@@ -9,7 +9,7 @@
         this is to prevent users from accessing pages that requires
         authentication such as the dashboard
     */
-    if (!isset($_SESSION['logged-in'])){
+    if (!isset($_SESSION['logged_id'])){
         header('location: ../login/login.php');
     }
 
@@ -38,127 +38,13 @@
     
 </head>
 <body>
-    <style>
-
-.formcontainer .btn {
-    padding: 15px 18px;
-    border: none;
-    background-color: #8ebf42;
-    color: #fff;
-    cursor: pointer;
-    margin-bottom: 15px;
-    opacity: 0.8;
-    
-}
-
-.cancel{
-    background-color: #B22222;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: left;
-    padding: 15px 18px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    margin-bottom: 15px;
-    opacity: 0.8;
-    width: 30%;
-    margin-top: 10px;
-}
-
-
-.container form {
  
-  justify-content: center;
-  align-items: center;
-  border: 2px solid black;
-  padding: 20px;
-  box-sizing: border-box;
-  position: relative;
-  background-color: #ccc;
-  margin-left: 70px;
-  margin-right: 80px;
-  width: 60%;
-}
-        input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-
-  padding: 15px 18px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    margin-bottom: 15px;
-    opacity: 0.8;
-    width: 30%;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: #E4E9F7;
-  padding: 20px;
-}
-
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-    </style>
-
 </body>
 </html>
 <div class="home-section">
 <div class="home-content"><nav>
             <div class="side-bar-button"><i class='bx bx-menu' ></i>
-            <span class="text" style="margin-bottom: 15px;">Cottage</span> </div>
+            <span class="text">Cottage</span> </div>
         </nav> 
         <div class="table-container">
         

@@ -9,7 +9,7 @@
         this is to prevent users from accessing pages that requires
         authentication such as the dashboard
     */
-    if (!isset($_SESSION['logged-in'])){
+    if (!isset($_SESSION['logged_id'])){
         header('location: ../login/login.php');
     }
 
@@ -46,7 +46,7 @@
 <div class="home-section">
 <div class="home-content"><nav>
             <div class="side-bar-button"><i class='bx bx-menu' ></i>
-            <span class="text" style="margin-bottom: 15px;">Hotel Rooms</span> </div>
+            <span class="text" >Hotel Rooms</span> </div>
         </nav> 
         <div class="table-container">
         
